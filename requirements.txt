@@ -1,2 +1,2 @@
 # Development / test dependencies (the analyzer itself uses only the standard library)
-pytest>=8.0
+pytest>=9.1.1
