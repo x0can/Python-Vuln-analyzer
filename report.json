@@ -1,0 +1,306 @@
+{
+  "total": 43,
+  "findings": [
+    {
+      "file": "pygoat\\challenge\\management\\commands\\populate_challenge.py",
+      "line": 17,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\challenge\\management\\commands\\populate_challenge.py",
+      "line": 17,
+      "rule_id": "ERR002",
+      "severity": "LOW",
+      "message": "Exception silently swallowed with pass"
+    },
+    {
+      "file": "pygoat\\challenge\\views.py",
+      "line": 24,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\challenge\\views.py",
+      "line": 42,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\challenge\\views.py",
+      "line": 42,
+      "rule_id": "ERR002",
+      "severity": "LOW",
+      "message": "Exception silently swallowed with pass"
+    },
+    {
+      "file": "pygoat\\dockerized_labs\\broken_auth_lab\\app.py",
+      "line": 117,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\dockerized_labs\\broken_auth_lab\\app.py",
+      "line": 117,
+      "rule_id": "ERR002",
+      "severity": "LOW",
+      "message": "Exception silently swallowed with pass"
+    },
+    {
+      "file": "pygoat\\dockerized_labs\\insec_des_lab\\main.py",
+      "line": 36,
+      "rule_id": "SEC004",
+      "severity": "HIGH",
+      "message": "pickle.loads() on untrusted data can execute code"
+    },
+    {
+      "file": "pygoat\\introduction\\apis.py",
+      "line": 100,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\apis.py",
+      "line": 136,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\lab_code\\test.py",
+      "line": 23,
+      "rule_id": "SEC005",
+      "severity": "HIGH",
+      "message": "yaml.load() without a safe Loader; use yaml.safe_load()"
+    },
+    {
+      "file": "pygoat\\introduction\\mitre.py",
+      "line": 188,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\mitre.py",
+      "line": 218,
+      "rule_id": "SEC001",
+      "severity": "HIGH",
+      "message": "Use of eval() allows code injection"
+    },
+    {
+      "file": "pygoat\\introduction\\mitre.py",
+      "line": 233,
+      "rule_id": "SEC003",
+      "severity": "HIGH",
+      "message": "subprocess.Popen() subprocess called with shell=True"
+    },
+    {
+      "file": "pygoat\\introduction\\playground\\ssrf\\main.py",
+      "line": 11,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 163,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 214,
+      "rule_id": "SEC004",
+      "severity": "HIGH",
+      "message": "pickle.loads() on untrusted data can execute code"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 294,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 296,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 308,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 322,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 324,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 430,
+      "rule_id": "SEC003",
+      "severity": "HIGH",
+      "message": "subprocess.Popen() subprocess called with shell=True"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 442,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 460,
+      "rule_id": "SEC001",
+      "severity": "HIGH",
+      "message": "Use of eval() allows code injection"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 461,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 560,
+      "rule_id": "SEC005",
+      "severity": "HIGH",
+      "message": "yaml.load() without a safe Loader; use yaml.safe_load()"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 563,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 566,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 713,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 725,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 882,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 930,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 965,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 1045,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 1083,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 1100,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 1144,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 1186,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 1186,
+      "rule_id": "ERR002",
+      "severity": "LOW",
+      "message": "Exception silently swallowed with pass"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 1195,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\introduction\\views.py",
+      "line": 1225,
+      "rule_id": "ERR001",
+      "severity": "MEDIUM",
+      "message": "Bare except: catches everything incl. SystemExit"
+    },
+    {
+      "file": "pygoat\\uninstaller.py",
+      "line": 128,
+      "rule_id": "ERR002",
+      "severity": "LOW",
+      "message": "Exception silently swallowed with pass"
+    }
+  ]
+}
