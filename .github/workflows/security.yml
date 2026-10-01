@@ -1,0 +1,58 @@
+name: Tests & Security
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+  schedule:
+    - cron: "0 6 * * 1"   # every Monday 06:00 UTC
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: Unit tests (pytest)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+
+  self-scan:
+    name: Analyzer scans its own code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # Fails the build if analyzer.py itself contains a risky pattern
+      - run: python analyzer.py analyzer.py
+
+  trivy:
+    name: Trivy (dependencies, secrets, misconfig)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write   # upload results to the GitHub Security tab
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Trivy
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: fs
+          scan-ref: .
+          scanners: vuln,secret,misconfig
+          severity: HIGH,CRITICAL
+          skip-dirs: pygoat,tests/samples,venv
+          format: sarif
+          output: trivy-results.sarif
+      - name: Upload results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        with:
+          sarif_file: trivy-results.sarif
